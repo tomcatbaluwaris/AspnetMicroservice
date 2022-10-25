@@ -24,7 +24,7 @@ public class CatalogController : ControllerBase
     public async Task<IEnumerable<Product>> GetProducts()
     {
         var products = await _repository.GetProducts();
-        var enumerable = products.Where(item => item.Description == "");
+        
         return products;
     }
     
